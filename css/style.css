@@ -13,6 +13,7 @@ body {
     display: flex;
     align-items: center;
     width: 100vw;
+    position: sticky;
 }
 
 #sitelogo {
@@ -32,7 +33,7 @@ body {
  position: absolute;
  margin-left: 80px;
  z-index: 3;
- font-family: cooper black;
+ font-family: 'Cooper Black', sans-serif;
 }
 
 #titletexth1 {
@@ -43,7 +44,7 @@ body {
      -webkit-background-clip: text;
      -moz-background-clip:text;
      background-clip:text; 
-     font-size:2rem;
+     font-size: 1.5rem;
      padding:0;
      margin:0;
      text-align:center;
@@ -133,14 +134,14 @@ nav {
     font-size: 3rem;
     letter-spacing: 0.1875rem;
     color: rgb(127, 14, 50);
-    font-family: cooper;
+    font-family: 'Cooper Black', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     position: relative;
 }
 
 #arrow {
-    position: relative;
+    position: absolute;
     margin-right: 55px;
     cursor: pointer;
     overflow-y: hidden;
@@ -174,16 +175,23 @@ nav {
 #grid_wrapper {
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 200px;
-    grid-template-rows: 80px 88vw 600px 600px 600px 80px;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 80px 88vw 88vw 88vw 80px;
     grid-template-areas: 
         "he na"
         "s1 s1"
         "s2 s2"
         "s3 s3"
-        "s4 s4"
         "fo fo";
+    width: 100vw;
+    background: #dcb695;
 }
+
+#grid_wrapper section {
+    width: 100vw;
+
+}
+
 
 header {
     grid-area: he;
@@ -207,18 +215,17 @@ header {
 #section_1 h2 {
     position: absolute;
     text-align: center;
-    top: 4.25%;
-    font-family: cooper;
+    top: calc(80px + 1%);
+    font-family: 'Cooper Black', sans-serif;
     font-size: 6vw;
+    color: #5c94b3;
 }
-
-
 
 
 #scn1p {
  grid-area: g_scn1txt;
  size: 100%;
- font-size: 3.25vw;
+ font-size: 4.25vw;
  font-family: 'Averia Serif Libre';
  margin: 2%;
 
@@ -226,6 +233,7 @@ header {
 
 #scn1img {
     border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 #scn1flex2 {
@@ -235,15 +243,16 @@ header {
     height: 100%;
     width: 100%;
     justify-content: center;
-    margin: 20px;
+    padding: 10px;
 }
 
 
 #scn1btn {
     position: relative;
     top: 40px;
-    background-color: #5c94b4;
+    background-image: url(../img/bluewoodtexture.png);
     border: none;
+    background-position: center center;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -253,12 +262,12 @@ header {
     box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 5px;
+    border-radius: 15px;
     transition: transform 0.3s;
 }
 
 #scn1btn div {
-    font-family: cooper;
+    font-family: 'Cooper Black', sans-serif;
     font-size: 4vw;
 }
 
@@ -268,25 +277,91 @@ header {
 
 #section_2 {
     grid-area: s2;
-    background: lightskyblue;
+    display: grid;
+    grid-template-rows: 2.3fr 10fr;
+    grid-template-areas: 
+    "s2p1"
+    "s2p2";
+    background: #dcb695;
+    width: 100%;
+    height: 100%;
+}
+
+#scn2title {
+    grid-area: s2p1;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    font-size: 2.5vw;
+    font-family: 'Cooper Black', sans-serif;
+    color: #5c94b3;
+}
+
+#scn2itembox {
+    grid-area: s2p2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#scn2itembox a {
+    width: 30%;
+    height: 79%;
+    background-color: azure;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-family: 'Averia Serif Libre';
+    text-align: center;
+    font-size: 2.4vw;
+    align-self: center;
+    transition: transform .4s;
+    text-decoration: none;
+    color: black;
+
+}
+
+#scn2itembox a:hover {
+    transform: scale(1.15);
+}
+
+#scn2itembox img {
+    width: 100%;
+}
+
+#scn2btndiv {
+    position: relative;
+    top: 40px;
+    background-image: url(../img/bluewoodtexture.png);
+    border: none;
+    background-position: center center;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    transition: transform 0.3s;
+    display: none;
 }
 
 #section_3 {
     grid-area: s3;
-    background: lightgreen;
 }
 
-#section_4 {
-    grid-area: s4;
-    background: rgb(211, 136, 230);
-}
 
 footer {
     grid-area: fo;
     background: lightcoral;
 }
 
+
 @media screen and (min-width: 800px) {
+
+    
 
     #indexheader {
         width: 350px;
@@ -298,14 +373,26 @@ footer {
 
     #grid_wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 600px 600px 80px;
+        grid-template-rows: 80px 44vw 44vw 80px;
         grid-template-areas: 
             "he he"
             "s1 s2"
-            "s3 s4"
+            "s3 s3"
             "fo fo";
     }
 
+    #grid_wrapper section {
+        width: 100%;
+    
+    }
+
+    #section_1 h2 {
+        font-size: 3vw;
+    }
+
+    #scn1p {
+        font-size: 2.125vw;
+    }
 
 
     #nav-links {
