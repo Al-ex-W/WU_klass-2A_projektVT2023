@@ -92,6 +92,21 @@ body {
     text-align:center;
 }
 
+#kontaktclick {
+    background: url(../img/owoodtexture.jpg) no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    background-clip:text;
+    padding:0;
+    font-size: 1rem;
+    margin:0;
+    text-align: center;
+}
+
+
 
 
 
@@ -176,7 +191,7 @@ nav {
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 1fr, 1fr;
-    grid-template-rows: 80px 88vw 88vw 88vw 80px;
+    grid-template-rows: 80px 88vw 88vw 88vw 250px;
     grid-template-areas: 
         "he na"
         "s1 s1"
@@ -248,32 +263,56 @@ header {
 
 
 #scn1btn {
-    position: relative;
-    top: 40px;
-    background-image: url(../img/bluewoodtexture.png);
-    border: none;
-    background-position: center center;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 15px;
-    transition: transform 0.3s;
+      align-items: center;
+      appearance: none;
+      background-image: radial-gradient(100% 100% at 100% 0, #965225 0, #7e3d07 100%);
+      border: 0;
+      border-radius: 1vw;
+      box-shadow: rgba(66, 60, 35, 0.4) 0 2px 4px,rgba(66, 49, 35, 0.3) 0 7px 13px -3px,rgba(111, 82, 58, 0.5) 0 -3px 0 inset;
+      box-sizing: border-box;
+      color: #c4d9ff;
+      cursor: pointer;
+      display: inline-flex;
+      font-family: 'Cooper Black', sans-serif;
+      height: 12vw;
+      justify-content: center;
+      line-height: 1;
+      list-style: none;
+      overflow: hidden;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      position: relative;
+      top: 10vw;
+      text-align: left;
+      text-decoration: none;
+      transition: box-shadow .15s,transform .15s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      white-space: nowrap;
+      will-change: box-shadow,transform;
+      font-size: 7vw;
 }
-
+   
 #scn1btn div {
-    font-family: 'Cooper Black', sans-serif;
-    font-size: 4vw;
+    overflow-y: hidden;
 }
 
-#scn1btn:hover {
-    transform: scale(95%);
+#scn1btn:focus {
+    box-shadow: #e0993c 0 0 0 1.5px inset, rgba(66, 56, 35, 0.4) 0 2px 4px, rgba(66, 52, 35, 0.3) 0 7px 13px -3px, #e08b3c 0 -3px 0 inset;
 }
+   
+#scn1btn:hover {
+    box-shadow: rgba(66, 53, 35, 0.4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e0993c 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+    
+#scn1btn:active {
+    box-shadow: #e08b3c 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
 
 #section_2 {
     grid-area: s2;
@@ -291,7 +330,7 @@ header {
     grid-area: s2p1;
     text-align: center;
     position: relative;
-    top: 10%;
+    top: 30%;
     font-size: 2.5vw;
     font-family: 'Cooper Black', sans-serif;
     color: #5c94b3;
@@ -306,8 +345,8 @@ header {
 
 #scn2itembox a {
     width: 30%;
-    height: 79%;
-    background-color: azure;
+    height: 70%;
+    background-color: rgb(235, 217, 192);
     border-radius: 1vw;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     font-family: 'Averia Serif Libre';
@@ -328,34 +367,121 @@ header {
     width: 100%;
 }
 
-#scn2btndiv {
-    position: relative;
-    top: 40px;
-    background-image: url(../img/bluewoodtexture.png);
-    border: none;
-    background-position: center center;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 15px;
-    transition: transform 0.3s;
-    display: none;
-}
 
 #section_3 {
     grid-area: s3;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:
+    "scn3a1" "scn3a2";
 }
+
+#scn3p1 {
+    grid-area: scn3a1;
+    background: #aa784d;
+    height: 100%;
+    font-family: 'Averia Serif Libre';
+    font-size: 3.1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#scn3p1 ul {
+    position: relative;
+    top: 3vw;
+    text-align: center;
+    line-height: 5vw;
+}
+
+#scn3p1 p {
+    position: relative;
+    top: 3vw;
+}
+
+#scn3p1 h2 {
+    position: relative;
+    top: 2.5vw;
+    text-align: center;
+    font-family: 'Cooper Black', sans-serif;
+    color: #a5cee4;
+}
+
+#scn3p1btn {
+    position: relative;
+    top: 8vw;
+    align-self: center;
+    width: 25vw;
+    height: 10vw;
+    border-radius: 3vw;
+    text-decoration: none;
+    transition: transform .4s;
+}
+
+#scn3p1btn:hover {
+    transform: scale(1.15);
+}
+
+#scn3p1btn div {
+    background-image: radial-gradient(100% 100% at 100% 0, #965225 0, #7e3d07 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: hidden;
+    font-family: 'Cooper Black', sans-serif;
+}
+
+#scn3p1btn p {
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    color: rgb(107, 152, 194);
+}
+
+
+#scn3p2 img {
+    height: 100%;
+}
+
 
 
 footer {
     grid-area: fo;
-    background: lightcoral;
+    background: #261e23;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+footer div {
+    height: 100%;
+}
+
+
+
+footer img {
+    height: 100%;
+}
+
+#fdiv1 {
+    margin-left: 20px;
+    font-size:4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Cooper Black', sans-serif;
+    letter-spacing: 0.2vw;
+}
+
+#fdiv1 ul {
+    width: 100%;
+    font-family: 'Averia Serif Libre';
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.76);
 }
 
 
@@ -373,7 +499,7 @@ footer {
 
     #grid_wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 44vw 44vw 80px;
+        grid-template-rows: 80px 44vw 60vw 500px;
         grid-template-areas: 
             "he he"
             "s1 s2"
@@ -394,6 +520,64 @@ footer {
         font-size: 2.125vw;
     }
 
+    #scn1btn {
+        border-radius: 0.5vw;
+        height: 6vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        top: 5vw;
+        font-size: 3.5vw;
+    }
+
+    #scn2title {
+        font-size: 1.25vw;
+    }
+
+    #scn2itembox a {
+        border-radius: 0.5vw;
+        font-size: 1.2vw;
+    }
+
+    #section_3 {
+        grid-area: s3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: #aa784d;
+    }
+    
+    #scn3p1 {
+        font-size: 3vw;
+    }
+    
+    #scn3p1 ul {
+        top: 2vw;
+        line-height: 3.5vw;
+    }
+    
+    #scn3p1 p {
+        top: 2vw;
+    }
+    
+    #scn3p1 h2 {
+        top: 2vw;
+    }
+    
+    #scn3p1btn {
+        top: 1vw;
+        width: 15vw;
+        height: 7vw;
+        border-radius: 2vw;
+        font-size: 2vw!important;
+    }
+
+    #scn3p2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    #scn3p2 img {
+        border-radius: 3vw;
+    }
 
     #nav-links {
         flex-direction: row;
@@ -411,5 +595,10 @@ footer {
     .nav_active {
         transform: none;
     }
+
+    #fdiv1 {
+        margin-left: 20px;
+        font-size:2vw;
+        letter-spacing: 0.1vw;
 
 }
