@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-#indexheader {
+header {
     display: flex;
     align-items: center;
     width: 100vw;
@@ -202,9 +202,64 @@ nav {
     background: #dcb695;
 }
 
+#omoss_grid_wrapper {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 80px 2000px 250px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "he na"
+    "os1 os1"
+    "fo fo";
+    width: 100vw;
+    background: #dcb695;
+}
+
+#omoss_s1 {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+#os1p1 {
+    width: 600px;
+    height: 1200px;
+    background: #261e23;
+    border-radius: 15px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#os1p1 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#os1p2 {
+    width: 600px;
+    background: #965225;
+    border-radius: 15px;
+    margin: 25px;
+    height: 1200px;
+    flex-direction: column;
+    align-content: center;
+}
+
+#os1p1d1 img {
+    width: 10%;
+    height: 100%;
+}
+
+
+
 #grid_wrapper section {
     width: 100vw;
-
 }
 
 
@@ -479,6 +534,11 @@ footer img {
     font-family: 'Averia Serif Libre';
 }
 
+#fdiv1 h3 {
+    position: relative;
+    top: -1vw;
+}
+
 footer a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.76);
@@ -489,7 +549,7 @@ footer a {
 
     
 
-    #indexheader {
+    header {
         width: 350px;
     }
     
@@ -505,6 +565,15 @@ footer a {
             "s1 s2"
             "s3 s3"
             "fo fo";
+    }
+
+    #omoss_grid_wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 2000px 500px;
+        grid-template-areas: 
+        "he he"
+        "os1 os1"
+        "fo fo" ;
     }
 
     #grid_wrapper section {
@@ -600,5 +669,5 @@ footer a {
         margin-left: 20px;
         font-size:2vw;
         letter-spacing: 0.1vw;
-
+    }
 }
