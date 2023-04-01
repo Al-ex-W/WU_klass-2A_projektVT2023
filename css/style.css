@@ -205,57 +205,231 @@ nav {
 #omoss_grid_wrapper {
     overflow-x: hidden;
     display: grid;
-    grid-template-rows: 80px 2000px 250px;
+    grid-template-rows: 80px 190vw 190vw 250px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "he na"
     "os1 os1"
+    "os2 os2"
     "fo fo";
     width: 100vw;
     background: #dcb695;
 }
 
 #omoss_s1 {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    justify-content: space-around;
-    flex-wrap: wrap;
+ grid-area: os1;
+ width: 100%;
+ height: 100%;
+ display: flex;
 
 }
 
+#omoss_s2 {
+    grid-area: os2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 #os1p1 {
-    width: 600px;
-    height: 1200px;
+    width: 90%;
+    height: 90%;
     background: #261e23;
     border-radius: 15px;
     margin: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-#os1p1 div {
+#os1p1d1 {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    justify-items: center;
+    height: fit-content;
     align-items: center;
+    position: relative;
+    top: 20px;
 }
 
-#os1p2 {
-    width: 600px;
-    background: #965225;
-    border-radius: 15px;
-    margin: 25px;
-    height: 1200px;
-    flex-direction: column;
-    align-content: center;
+#os1p1d1 h2 {
+    font-family: 'Cooper Black', Sans-Serif;
+    color: #5c94b3;
+    font-size: 12vw;
+    letter-spacing: 1vw;
+    padding: 4vw;
+    overflow-y: hidden;
+}
+
+#os1p1d1 h3 {
+    font-family: 'Cooper Black', Sans-Serif;
+    color: #5c94b3;
+    font-size: 8vw;
+    text-align: center;
+}
+
+#os1p1d1 p {
+    color: #dcb695;
+    font-family: 'Averia Serif Libre';
+    position: relative;
+    top: -2vw;
+    text-align: center;
+    font-size: 2.95vw;
 }
 
 #os1p1d1 img {
-    width: 10%;
-    height: 100%;
+    border-radius: 7px;
+    height: 40vw;
 }
 
+#os1p1d2 div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vw;
+    text-align: center;
+    font-family: Cooper Black, sans-serif;
+    font-size: 5vw;
+    color: #5c94b3;
+}
+
+#os1p1d2 h4 {
+    overflow-y: hidden;
+}
+
+#os1p1d2 img {
+    height: max-content;
+    align-self: center;
+    border-radius: 10000px;
+    height: 100%;
+    border: 12px double #af7325;
+}
+
+#os1p1d2 {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    height: minmax(50vw, 200px);
+    overflow-y: hidden;
+}
+
+#os1p2 {
+    width: 90%;
+    height: 90%;
+    background: #ffd9c0;
+    border-radius: 15px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#os1p2d1 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 45vw;
+    text-align: center;
+}
+
+#os1p2d1 img {
+    width: 100%;
+    position: relative;
+    top: 10vw;
+}
+
+#os1p2d1 h2 {
+    position: absolute;
+    top: 27vw;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    width: 100%;
+    font-family: Cooper Black, sans-serif;
+}
+
+#os1p2d2 {
+    font-size: 3.2vw;
+    font-family: 'Averia Serif Libre';
+    color: #7e421a;
+}
+
+#os1p2d3 {
+    height: 65vw;
+    overflow-y: hidden;
+}
+
+#os1p2d3btn {
+    width: 60vw;
+    height: 10vw;
+    background: rgb(78,70,217);
+    background: linear-gradient(90deg, rgba(78,70,217,1) 0%, rgba(24,142,187,1) 0%, rgba(30,192,224,1) 100%);
+    border-radius: 4vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    align-self: center;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s;
+    position: relative;
+    top: 5vw;
+}
+
+#os1p2d3btn:hover {
+    transform: scale(0.95);
+}
+
+#os1p2d3btnlink {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    color: black;
+}
+
+#os1p2d3btnlink p {
+    width: 100%;
+    text-align: center;
+    font-size: 5.5vw;
+    font-family: Cooper black, sans-serif;
+}
+
+
+#os1p2d3btn:hover {
+    cursor: pointer;
+}
+
+
+#os1p2d3imgs {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    height: 80%;
+    position: relative;
+    top: 10vw;
+    font-family: 'Averia Serif Libre';
+}
+
+#os1p2d3imgs p {
+    position: absolute;
+    font-size: 4vw;
+}
+
+
+#os1p2d3imgs img {
+    width: 45%;
+    align-self: center;
+    position: relative;
+}
 
 
 #grid_wrapper section {
@@ -566,19 +740,24 @@ footer a {
             "s3 s3"
             "fo fo";
     }
+    
 
     #omoss_grid_wrapper {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 2000px 500px;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 80px 100vw 500px;
         grid-template-areas: 
         "he he"
-        "os1 os1"
+        "os1 os2"
         "fo fo" ;
     }
 
     #grid_wrapper section {
         width: 100%;
     
+    }
+
+    #omoss_grid_wrapper section {
+        width: 100%;
     }
 
     #section_1 h2 {
@@ -670,4 +849,74 @@ footer a {
         font-size:2vw;
         letter-spacing: 0.1vw;
     }
+
+
+       #os1p1d1 h2 {
+           font-size: 6vw;
+           letter-spacing: 0.5vw;
+           padding: 2vw;
+       }
+
+       #os1p1d1 h3 {
+            font-size: 4vw;
+       }
+       
+       #os1p1d1 p {
+           top: -1vw;
+           font-size: 1.475vw;
+       }
+       
+       #os1p1d1 img {
+           height: 20vw;
+       }
+       
+       #os1p1d2 div {
+           height: 25vw;
+           font-size: 2.5vw;
+       }
+       
+       #os1p1d2 {
+           height: minmax(25vw, 200px);
+       }
+
+       #os1p2d1 {
+           height: 22.5vw;
+       }
+       
+       #os1p2d1 img {
+           top: 5vw;
+       }
+       
+       #os1p2d1 h2 {
+           top: 13.5vw;
+           font-size: 3vw;
+       }
+       
+       #os1p2d2 {
+           font-size: 1.6vw;
+       }
+       
+       #os1p2d3 {
+           height: 32.5vw;
+       }
+       
+       #os1p2d3btn {
+           width: 30vw;
+           height: 5vw;
+           border-radius: 2vw;
+           top: 2.5vw;
+       }
+  
+       
+       #os1p2d3btnlink p {
+           font-size: 2.75vw;
+       }
+       
+       #os1p2d3imgs {
+           top: 5vw;
+       }
+       
+       #os1p2d3imgs p {
+           font-size: 2vw;
+       }
 }
