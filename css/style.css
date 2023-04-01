@@ -3,6 +3,26 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    font-family: 'Averia Serif Libre';
+}
+
+h1 {
+    font-family: Cooper Black!important;
+}
+
+h2 {
+    font-family: Cooper Black!important;
+}
+h3 {
+    font-family: Cooper Black!important;
+}
+
+h4 {
+    font-family: Cooper Black!important;
+}
+
+u {
+    font-family: Cooper Black!important;
 }
 
 body {
@@ -48,6 +68,7 @@ header {
      padding:0;
      margin:0;
      text-align:center;
+     font-family: Cooper Black, sans-serif;
 }
 
 #hemclick {
@@ -216,11 +237,152 @@ nav {
     background: #dcb695;
 }
 
+#shop_grid_wrapper {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 80px 240vw 117vw 250px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "he na"
+    "ss1 ss1"
+    "ss2 ss2"
+    "fo fo";
+    width: 100vw;
+    background: #dcb695;
+}
+
+#shs1 {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    grid-area: ss1;
+    background-color: rgb(165, 88, 20);
+    width: 97%;
+    text-align: center;
+    padding-top: 4vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border: 9px groove #e89416;
+    height: 99%;
+    align-self: center;
+    border-radius: 4vw;
+}
+
+#shs1 h2 {
+    font-family: Cooper Black, sans-serif;
+    position: relative;
+    font-size: 14vw;
+    color: #5c94b3;
+    overflow-y: hidden;
+}
+
+#shs1 p {
+    font-size: 3.3vw;
+    overflow-y: hidden;
+}
+
+#shs1 h3 {
+    position: relative;
+    top: 4vw;
+    font-size: 5.6vw;
+    overflow-y: hidden;
+}
+
+#shs1 img {
+    width: 40%;
+    align-self: center;
+    position: relative;
+    top: 4vw;
+    margin: 2vw;
+    border-radius: 2vw;
+}
+
+#shs2 {
+    grid-area: ss2;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "shs2p1"
+    "shs2p2"
+    "shs2p3";
+    align-self: center;
+}
+
+#shs2 img {
+    width: 100%;
+    border: 7px double #ff9f50;
+    border-radius: 1.33vw; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;  
+}
+
+.shs2d {
+    width: 100%;
+    height: 100%;
+}
+
+.shs2d div {
+    height: calc(100% - 5.33vw);
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.shs2d nav {
+    display: flex;
+    height: 5.33vw;
+    width: 100%;
+    justify-content: center;
+}
+
+.shs2d h3 {
+    text-align: left;
+    align-self: center;
+    justify-self: center;
+    font-size: 4.67vw;
+    color: #5c94b3;
+    position: relative;
+}
+
+.shs2d article {
+    width: 20vw;
+    height: 24.67vw;
+    border-radius: 1.33vw;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: #ffe9da;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 800;
+    transition: transform 0.5s;
+}
+
+.shs2d article:hover {
+    transform: scale(1.2);
+}
+
+
+#shs2d1 {
+    grid-area: shs2p1;
+}
+
+#shs2d2 {
+    grid-area: shs2p2;
+}
+
+#shs2d3 {
+    grid-area: shs2p3;
+}
+
 #omoss_s1 {
- grid-area: os1;
- width: 100%;
- height: 100%;
- display: flex;
+    grid-area: os1;
+    width: 100%;
+    height: 100%;
+    display: flex;
 
 }
 
@@ -751,12 +913,29 @@ footer a {
         "fo fo" ;
     }
 
+    #shop_grid_wrapper {
+        overflow-x: hidden;
+        display: grid;
+        grid-template-rows: 80px 95vw 250px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he he he"
+        "ss1 ss2 ss2 ss2"
+        "fo fo fo fo";
+        width: 100vw;
+        background: #dcb695; 
+    }
+
     #grid_wrapper section {
         width: 100%;
     
     }
 
     #omoss_grid_wrapper section {
+        width: 100%;
+    }
+
+    #kontakt_grid_wrapper section {
         width: 100%;
     }
 
@@ -919,4 +1098,61 @@ footer a {
        #os1p2d3imgs p {
            font-size: 2vw;
        }
+
+       
+       
+       
+       
+       
+       
+       
+       #shs1 {
+        padding-top: 1vw;
+        padding-left: 0.5vw;
+        padding-right: 0.5vw;
+        border-radius: 1vw;
+    }
+    
+    #shs1 h2 {
+        font-size: 3.5vw;
+    }
+    
+    #shs1 p {
+        font-size: 0.9vw;
+    }
+    
+    #shs1 h3 {
+        top: 1vw;
+        font-size: 1.4vw;
+    }
+    
+    #shs1 img {
+        top: 3vw;
+        margin: 1vw;
+        border-radius: 1vw;
+        width: 70%;
+    }
+    
+    #shs2 img {
+        border-radius: 1vw;  
+    }
+    
+    .shs2d div {
+        height: calc(100% - 4vw);
+    }
+    
+    .shs2d nav {
+        height: 4vw;
+    }
+    
+    .shs2d h3 {
+        font-size: 3.5vw;
+    }
+    
+    .shs2d article {
+        width: 15vw;
+        height: 18.5vw;
+        border-radius: 1vw;
+        font-size: 1.5vw;
+    }
 }
