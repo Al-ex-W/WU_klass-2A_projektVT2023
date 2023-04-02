@@ -6,6 +6,18 @@
     font-family: 'Averia Serif Libre';
 }
 
+*::-moz-selection {
+    background: red;
+}
+  
+*::selection {
+    background: red;
+}
+
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: Cooper Black!important;
 }
@@ -39,6 +51,7 @@ header {
 #sitelogo {
     overflow-y: hidden;
     height: 65px;
+    width: 65px;
     z-index: 4;
     transition: transform .5s;
 }
@@ -158,7 +171,7 @@ nav {
     position: absolute;
     top: 81px;
     right: -1000px;
-    transition: all 0.5s;
+    transition: transform 0.5s;
     z-index: 4;
 }
 
@@ -178,7 +191,7 @@ nav {
 
 #arrow {
     position: absolute;
-    margin-right: 55px;
+    right: 4vw;
     cursor: pointer;
     overflow-y: hidden;
 }
@@ -211,7 +224,7 @@ nav {
 #grid_wrapper {
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px 88vw 88vw 88vw 250px;
     grid-template-areas: 
         "he na"
@@ -251,6 +264,105 @@ nav {
     background: #dcb695;
 }
 
+#kontakt_grid_wrapper {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 80px 1fr 250px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "he na"
+    "ks1 ks1"
+    "fo fo";
+    width: 100vw;
+    background: #dcb695;
+}
+
+#kts1 {
+    display: none;
+    align-self: center;
+    grid-area: ks1;
+    width: 100vw;
+    height: calc(1700px + 100vw);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
+#kts1 h2 {
+    position: absolute;
+    left: 50%;
+    top: 90px;
+    transform: translate(-50%);
+    text-align: center;
+    color: #5c94b3;
+}
+
+#kts1p {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    transform: translate(-50%);
+    text-align: center;
+    width: 95vw;
+    font-size: 1rem;
+    color: #261e23;
+    font-size: 1.2rem;
+}
+
+.kts1rul li {
+    text-align: right;
+}
+
+.kts1d {
+    width: 360px;
+    height: 680px;
+    border-radius: 8px;
+    background-color: #aa784d;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    top: 160px;
+    margin: 20px;
+    padding: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border: 5px outset #d18b49;
+}
+
+#kts1d3 {
+    width: 90vw;
+    margin-top: 23px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 40px;
+    
+}
+
+#kts1d3 div {
+    top: -20px;
+}
+
+#kts1d3 p {
+    font-size: 1.15rem;
+}
+
+#kts1d3 h3 {
+    font-size: 2.5rem;
+}
+
+#kts1d3 img {
+    width: 80%;
+    position: relative;
+    bottom: 6vw;
+}
+
+
 #shs1 {
     overflow-y: hidden;
     display: flex;
@@ -278,7 +390,7 @@ nav {
 }
 
 #shs1 p {
-    font-size: 3.3vw;
+    font-size: 3vw;
     overflow-y: hidden;
 }
 
@@ -433,6 +545,8 @@ nav {
     color: #5c94b3;
     font-size: 8vw;
     text-align: center;
+    position: relative;
+    top: -10px;
 }
 
 #os1p1d1 p {
@@ -477,7 +591,6 @@ nav {
     justify-content: space-around;
     align-content: center;
     width: 100%;
-    height: minmax(50vw, 200px);
     overflow-y: hidden;
 }
 
@@ -598,6 +711,17 @@ nav {
     width: 100vw;
 }
 
+#shop_grid_wrapper section {
+    width: 100vw;
+}
+
+#omoss_grid_wrapper section {
+    width: 100vw;
+}
+
+#kontakt_grid_wrapper section {
+ width: 100vw;
+}
 
 header {
     grid-area: he;
@@ -630,7 +754,6 @@ header {
 
 #scn1p {
  grid-area: g_scn1txt;
- size: 100%;
  font-size: 4.25vw;
  font-family: 'Averia Serif Libre';
  margin: 2%;
@@ -695,7 +818,7 @@ header {
    
 #scn1btn:hover {
     box-shadow: rgba(66, 53, 35, 0.4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #e0993c 0 -3px 0 inset;
-    transform: translateY(-2px);
+    transform: translateY(-2px)
 }
     
 #scn1btn:active {
@@ -781,7 +904,7 @@ header {
     position: relative;
     top: 3vw;
     text-align: center;
-    line-height: 5vw;
+    line-height: 4vw;
 }
 
 #scn3p1 p {
@@ -833,6 +956,7 @@ header {
 
 #scn3p2 img {
     height: 100%;
+    overflow-y: hidden;
 }
 
 
@@ -843,6 +967,7 @@ footer {
     display: flex;
     justify-content: space-between;
     color: rgba(255, 255, 255, 0.76);
+    width: 100vw;
 }
 
 footer div {
@@ -853,6 +978,8 @@ footer div {
 
 footer img {
     height: 100%;
+    overflow-y: hidden;
+    margin-right: 40px;
 }
 
 #fdiv1 {
@@ -922,8 +1049,15 @@ footer a {
         "he he he he"
         "ss1 ss2 ss2 ss2"
         "fo fo fo fo";
-        width: 100vw;
-        background: #dcb695; 
+    }
+
+    #kontakt_grid_wrapper {
+        grid-template-rows: 80px 1fr 250px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "he he"
+        "ks1 ks1"
+        "fo fo";
     }
 
     #grid_wrapper section {
@@ -936,6 +1070,10 @@ footer a {
     }
 
     #kontakt_grid_wrapper section {
+        width: 100%;
+    }
+
+    #shop_grid_wrapper section {
         width: 100%;
     }
 
@@ -978,7 +1116,7 @@ footer a {
     
     #scn3p1 ul {
         top: 2vw;
-        line-height: 3.5vw;
+        line-height: 3vw;
     }
     
     #scn3p1 p {
@@ -1054,9 +1192,6 @@ footer a {
            font-size: 2.5vw;
        }
        
-       #os1p1d2 {
-           height: minmax(25vw, 200px);
-       }
 
        #os1p2d1 {
            height: 22.5vw;
@@ -1154,5 +1289,17 @@ footer a {
         height: 18.5vw;
         border-radius: 1vw;
         font-size: 1.5vw;
+    }
+
+    #kts1d3 p {
+        font-size: 2rem;
+    }
+
+    #kts1p {
+        font-size: 1.7rem;
+    }
+
+    #kts1 {
+        height: calc(950px + 100vw);
     }
 }
