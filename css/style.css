@@ -330,6 +330,12 @@ nav {
     border: 5px outset #d18b49;
 }
 
+.kts1d ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #kts1d3 {
     width: 90vw;
     margin-top: 23px;
@@ -392,6 +398,7 @@ nav {
 #shs1 p {
     font-size: 3vw;
     overflow-y: hidden;
+    text-align: left;
 }
 
 #shs1 h3 {
@@ -511,6 +518,7 @@ nav {
     background: #261e23;
     border-radius: 15px;
     margin: 25px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -528,7 +536,7 @@ nav {
     height: fit-content;
     align-items: center;
     position: relative;
-    top: 20px;
+
 }
 
 #os1p1d1 h2 {
@@ -543,18 +551,15 @@ nav {
 #os1p1d1 h3 {
     font-family: 'Cooper Black', Sans-Serif;
     color: #5c94b3;
-    font-size: 8vw;
     text-align: center;
     position: relative;
-    top: -10px;
+    
 }
 
 #os1p1d1 p {
     color: #dcb695;
     font-family: 'Averia Serif Libre';
     position: relative;
-    top: -2vw;
-    text-align: center;
     font-size: 2.95vw;
 }
 
@@ -567,7 +572,7 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 50vw;
+    height: 100%;
     text-align: center;
     font-family: Cooper Black, sans-serif;
     font-size: 5vw;
@@ -579,10 +584,9 @@ nav {
 }
 
 #os1p1d2 img {
-    height: max-content;
     align-self: center;
     border-radius: 10000px;
-    height: 100%;
+    height: 50%;
     border: 12px double #af7325;
 }
 
@@ -592,9 +596,12 @@ nav {
     align-content: center;
     width: 100%;
     overflow-y: hidden;
+    position: relative;
+    bottom: 0;
 }
 
 #os1p2 {
+    padding: 20px;
     width: 90%;
     height: 90%;
     background: #ffd9c0;
@@ -613,7 +620,6 @@ nav {
     top: 0;
     width: 100%;
     height: 45vw;
-    text-align: center;
 }
 
 #os1p2d1 img {
@@ -630,12 +636,13 @@ nav {
     font-size: 6vw;
     width: 100%;
     font-family: Cooper Black, sans-serif;
+    text-align: center;
 }
 
 #os1p2d2 {
     font-size: 3.2vw;
     font-family: 'Averia Serif Libre';
-    color: #7e421a;
+    color: #52270a;
 }
 
 #os1p2d3 {
@@ -759,6 +766,8 @@ header {
  margin: 2%;
 
 }
+
+
 
 #scn1img {
     border-radius: 7px;
@@ -892,12 +901,12 @@ header {
 
 #scn3p1 {
     grid-area: scn3a1;
-    background: #aa784d;
     height: 100%;
     font-family: 'Averia Serif Libre';
-    font-size: 3.1vw;
+    font-size: 2.7vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 #scn3p1 ul {
@@ -921,8 +930,6 @@ header {
 }
 
 #scn3p1btn {
-    position: relative;
-    top: 8vw;
     align-self: center;
     width: 25vw;
     height: 10vw;
@@ -957,6 +964,7 @@ header {
 #scn3p2 img {
     height: 100%;
     overflow-y: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 
@@ -1022,7 +1030,7 @@ footer a {
 
     #grid_wrapper {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 44vw 60vw 500px;
+        grid-template-rows: 80px 44vw 40vw 500px;
         grid-template-areas: 
             "he he"
             "s1 s2"
@@ -1107,11 +1115,11 @@ footer a {
         grid-area: s3;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        background-color: #aa784d;
+        padding: 10px;
     }
     
     #scn3p1 {
-        font-size: 3vw;
+        font-size: 1.8vw;
     }
     
     #scn3p1 ul {
@@ -1125,14 +1133,19 @@ footer a {
     
     #scn3p1 h2 {
         top: 2vw;
+        text-shadow: 2px 2px 2px #000000;
     }
     
     #scn3p1btn {
         top: 1vw;
         width: 15vw;
-        height: 7vw;
+        height: 3vw;
         border-radius: 2vw;
         font-size: 2vw!important;
+    }
+
+    #scn3p1btn p {
+        transform: translateY(-50%);
     }
 
     #scn3p2 {
@@ -1142,6 +1155,8 @@ footer a {
 
     #scn3p2 img {
         border-radius: 3vw;
+        height: 90%;
+        align-self: center;
     }
 
     #nav-links {
