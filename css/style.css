@@ -595,6 +595,7 @@ nav {
     justify-content: space-around;
     align-content: center;
     width: 100%;
+    height: 37%;
     overflow-y: hidden;
     position: relative;
     bottom: 0;
@@ -695,9 +696,9 @@ nav {
     display: flex;
     justify-content: space-around;
     text-align: center;
-    height: 80%;
+    height: 100%;
     position: relative;
-    top: 10vw;
+    bottom: -50px;
     font-family: 'Averia Serif Libre';
 }
 
@@ -722,8 +723,17 @@ nav {
     width: 100vw;
 }
 
-#omoss_grid_wrapper section {
+#shop_grid_wrapper main {
     width: 100vw;
+}
+
+#omoss_grid_wrapper main {
+    width: 100vw;
+}
+
+
+#omoss_grid_wrapper aside {
+    width: 50vw;
 }
 
 #kontakt_grid_wrapper section {
@@ -873,13 +883,20 @@ header {
     border-radius: 1vw;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     font-family: 'Averia Serif Libre';
-    text-align: center;
     font-size: 2.4vw;
     align-self: center;
     transition: transform .4s;
     text-decoration: none;
     color: black;
 
+}
+
+#scn2itembox h3 {
+    text-align: center;
+}
+
+#scn2itembox p {
+    padding: 0.35vw;
 }
 
 #scn2itembox a:hover {
@@ -1073,15 +1090,16 @@ footer a {
     
     }
 
-    #omoss_grid_wrapper section {
-        width: 100%;
-    }
-
     #kontakt_grid_wrapper section {
         width: 100%;
     }
 
-    #shop_grid_wrapper section {
+    #shop_grid_wrapper main {
+        width: 100%;
+    }
+
+
+    #omoss_grid_wrapper main {
         width: 100%;
     }
 
@@ -1203,7 +1221,7 @@ footer a {
        }
        
        #os1p1d2 div {
-           height: 25vw;
+           height: 40vw;
            font-size: 2.5vw;
        }
        
